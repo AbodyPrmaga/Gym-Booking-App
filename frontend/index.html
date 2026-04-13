@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gym Booking Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            700: '#1d4ed8'
+                        }
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        body {
+            background: linear-gradient(180deg, #eef2ff 0%, #ffffff 100%);
+        }
+
+        .scrollbar-thin::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .scrollbar-thin::-webkit-scrollbar-thumb {
+            background-color: rgba(100, 116, 139, 0.45);
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen text-slate-900">
+    <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+        <div class="mb-8 flex flex-col gap-4 rounded-3xl bg-white/90 p-6 shadow-xl shadow-slate-200/80 backdrop-blur">
+            <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                    <p class="text-sm uppercase tracking-[0.3em] text-brand-700">Gym Booking Admin</p>
+                    <h1 class="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">FastAPI Dashboard</h1>
+                    <p class="mt-2 max-w-2xl text-slate-600">Manage users, services, slots, and bookings with
+                        authentication and API-driven forms.</p>
+                </div>
+                <div class="flex items-center gap-2">
+                    <button id="logoutButton"
+                        class="hidden rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-50">Logout</button>
+                </div>
+            </div>
+            <div id="messageBanner"></div>
+        </div>
+        <div id="app"></div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
